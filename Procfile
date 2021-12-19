@@ -1,1 +1,1 @@
-web: gunicorn mysite.wsgi
+web: python manage.py makemigrations && python manage.py migrate && pip install gunicorn && gunicorn --chdir back-end mysite.wsgi --log-file -
